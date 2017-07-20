@@ -1,5 +1,7 @@
 #!/usr/bin/env node
 
+const fs = require('fs');
+const nconf_wrapper = require('./nconf_wrapper');
 const program = require('commander');
 const prompt = require('prompt');
 const sh = require('shelljs');
@@ -9,5 +11,6 @@ program
   .parse(process.argv);
 
 
-const package = program.args[0];
-console.log(`zooming to ${package}`);
+
+
+const command = program.args[0];
