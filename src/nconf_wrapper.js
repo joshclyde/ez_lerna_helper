@@ -5,26 +5,26 @@ const PATH_TO_CONFIG = 'config/config.json';
 nconf.argv().env().file({ file: PATH_TO_CONFIG });
 nconf.load();
 
-const get = (key) => {
+const get = key => {
   return nconf.get(key);
 }
 
 const save = () => {
-  nconf.save((err) => {
-    fs.readFile(PATH_TO_CONFIG, function (err, data) {
-      // console.dir(JSON.parse(data.toString()))
-    });
+  nconf.save(err => {
+    if (err) {
+      console.log(err);
+    };
   });
 }
 
 const set = (key, value) => {
   nconf.set(key, value);
   save();
+  console.log('hi');
 }
 
 
 module.exports = {
   get,
-  save,
   set,
 }

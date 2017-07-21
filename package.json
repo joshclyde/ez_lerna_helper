@@ -1,10 +1,11 @@
 {
-  "name": "lerna_ez_helper",
+  "name": "ez_lerna_helper",
   "version": "0.0.0",
   "description": "A CLI to help easily navigate a lerna project.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "go": "cd src"
   },
   "author": "Josh Clyde",
   "license": "ISC",
